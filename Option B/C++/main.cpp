@@ -49,11 +49,13 @@ int whatIsLeft(int &n){
         if (nRemaining == 1) {break;}
     }
     // Return the final remaining one
+    int result = -1;
     for (int i = 1; i < n+1; i++){
         if (vec[i]){
-            return vec[i];
+            result = vec[i];
         }
     }
+    return result;
 }
 
 int main() {
